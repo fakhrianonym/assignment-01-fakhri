@@ -10,7 +10,7 @@ Fashion Store FS adalah landing page toko fashion online yang dibuat menggunakan
 Home,products,about,contact dan footer yang ada simbol copyright
 
 # Kesulitan yang Dihadapi :
-  Tidak bisa menggunakan ai
+  Tidak bisa menggunakan a
 
 # Hal Baru yang Dipelajari :
 Disini saya dapat mengambil kesimpulan bahwa segala sesuatu itu butuh proses
