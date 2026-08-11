@@ -12,13 +12,6 @@ Cek dulu Git udah terinstall apa belum:
 git --version
 ```
 
-Terus set nama sama email buat identitas commit:
-
-```bash
-git config --global user.name "[nama]"
-git config --global user.email "[email]"
-```
-
 ## 2. Buat Repository
 
 Bikin repo baru di GitHub namanya `assignment-01-fakhri`. Waktu bikin, opsi "Add README" sama "Add .gitignore" sengaja nggak dicentang, biar nggak bentrok pas push dari lokal nanti.
