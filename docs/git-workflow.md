@@ -1,4 +1,4 @@
- # Git Workflow - Fashion Store FS
+# Git Workflow - Fashion Store FS
 
 Ini dokumentasi proses upload project Fashion Store FS ke GitHub pakai Git.
 
@@ -10,6 +10,13 @@ Cek dulu Git udah terinstall apa belum:
 
 ```bash
 git --version
+```
+
+Terus set nama sama email buat identitas commit:
+
+```bash
+git config --global user.name "Nama Kamu"
+git config --global user.email "email@kamu.com"
 ```
 
 ## 2. Buat Repository
@@ -29,7 +36,7 @@ git init
 
 Ini bikin folder `.git` yang nyimpen semua riwayat project.
 
-![git init](screenshots/git init.png)
+![git init](screenshots/get-init.png)
 
 ## 4. Cek Perubahan File
 
@@ -39,7 +46,7 @@ git status
 
 Semua file (index.html, css, images) masih warna merah / "untracked" karena Git belum nyatet file-file itu.
 
-![git status](screenshots/git status.png)
+![git status](screenshots/git-status.png)
 
 ## 5. Staging
 
@@ -49,7 +56,7 @@ git add .
 
 Titik artinya semua file dimasukin. Habis itu cek lagi pake `git status`, warnanya udah jadi hijau, siap di-commit.
 
-![git add](screenshots/git add.png)
+![git add](screenshots/git-add.png)
 
 ## 6. Commit
 
@@ -59,7 +66,7 @@ git commit -m "Initial commit: struktur project Fashion Store FS"
 
 Ini nyimpen semua file yang tadi ke riwayat Git secara permanen.
 
-![commit pertama](screenshots/git commit 1.png)
+![commit pertama](screenshots/git-commit1.png)
 
 ## 7. Hubungin ke Remote
 
@@ -71,7 +78,7 @@ git remote -v
 
 `origin` itu nama alias buat URL GitHub-nya, biar nggak perlu ketik URL panjang tiap mau push.
 
-![remote](screenshots/git remote.png)
+![remote](screenshots/git-remote.png)
 
 ## 8. Push ke GitHub
 
@@ -81,12 +88,16 @@ git push -u origin main
 
 Karena baru pertama push, disuruh login dulu lewat browser.
 
-![login github](screenshots/git push auten.png)
+![login github](screenshots/git-push-auten.png)
 
-Setelah login, push-nya lanjut sampe selesai, terus file udah muncul di GitHub.
+Setelah login, push-nya jalan dan selesai tanpa error.
 
-![push selesai](screenshots/git push berhasil.png)
-![file di github](screenshots/git file ter uploud.png)
+![proses push](screenshots/git-push.png)
+![push berhasil](screenshots/git-push-berhasil.png)
+
+Terus file udah muncul di GitHub.
+
+![file di github](screenshots/get-file-teruploud.png)
 
 ## 9. Perubahan Lanjutan
 
@@ -96,8 +107,8 @@ Commit yang udah dibuat:
 - `Add: gitignore file` - nambahin .gitignore biar file kayak Thumbs.db nggak ikut ke-upload
 - `Update: tampilan section about` - ubah CSS di section about
 
-![commit gitignore](screenshots/add git ignore.png)
-![commit update about](screenshots/add git about.png)
+![commit gitignore](screenshots/add-git-ignore.png)
+![commit update about](screenshots/add-git-about.png)
 
 ## 10. Lihat Riwayat Commit
 
@@ -107,7 +118,7 @@ git log --oneline
 
 Ini nunjukin semua commit yang udah pernah dibuat, dari yang paling baru di atas.
 
-![git log](screenshots/git push log github.png)
+![git log](screenshots/hasil-git-log-online.png)
 
 ## 11. Kendala
 
@@ -120,7 +131,3 @@ Ini nunjukin semua commit yang udah pernah dibuat, dari yang paling baru di atas
 Dari tugas ini saya jadi paham alur Git itu: edit file → `add` (masuk staging) → `commit` (kesimpen permanen di lokal) → `push` (dikirim ke GitHub). Nggak bisa langsung commit tanpa add dulu, dan kalo file belum di-save Git nggak bakal ngedeteksi ada perubahan.
 
 Commit message juga penting biar keliatan perubahan apa aja yang udah dilakuin, jadi nggak cuma 1 commit gede doang. `.gitignore` juga berguna biar file yang nggak penting (kayak file sampah sistem) nggak ikut ke-upload ke GitHub.
-
-Bukti project udah lengkap tersedia di GitHub:
-
-![hasil akhir](screenshots/hasil git online.png)
